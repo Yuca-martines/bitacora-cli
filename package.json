@@ -9,5 +9,8 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "object-hash": "^3.0.0"
   }
 }
