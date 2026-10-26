@@ -1,4 +1,4 @@
-import { agregar, listar, buscar, borrar } from "./notas.js"
+import { agregar, listar, buscar, borrar, respaldar, exportar } from "./notas.js"
 import { registrarAccion } from "./almacen.js"
 import Fecha from "./fechas.js";
 
@@ -12,6 +12,8 @@ function ayuda() {
     console.log("  listar [numero] - Lista las ultimas notas")
     console.log("  buscar <palabra> - Busca notas por palabra")
     console.log("  borrar <id> - Borra una nota por id")
+    console.log("  respaldar - Guarda una copia de respaldo de notas.json")
+    console.log("  exportar [carpeta-destino] - Exporta las notas a un archivo de texto")
     console.log("")
 }
 
@@ -30,6 +32,12 @@ try {
             break;
         case "borrar":
             resultado = borrar(args[0]);
+            break;
+        case "respaldar":
+            resultado = respaldar();
+            break;
+        case "exportar":
+            resultado = exportar(args[0]);
             break;
         case "ayuda":
             resultado = ayuda();

@@ -80,3 +80,5 @@ export function borrar(id) {
 
     return `Se borro la nota con id ${id}`;
 }
+
+export { respaldar, exportar } from "./almacen.js";
