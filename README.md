@@ -24,14 +24,14 @@ npm install
 ## Comandos disponibles
 
 | Comando | Descripción | Ejemplo |
-| :--- | :--- | :--- |
-| `agregar "<texto>" [etiqueta]` | Guarda una nueva nota (etiqueta opcional, por defecto `general`). | `node src/index.js agregar "Terminar reporte" trabajo` |
-| `listar [N]` | Muestra las últimas N notas (por defecto muestra 5). | `node src/index.js listar 3` |
-| `buscar <palabra>` | Busca notas que contengan la palabra indicada. | `node src/index.js buscar reporte` |
-| `borrar <id>` | Elimina una nota mediante su ID de 8 caracteres. | `node src/index.js borrar a1b2c3d4` |
-| `respaldar` | Crea una copia con marca de tiempo de `notas.json` en `respaldos/`. | `node src/index.js respaldar` |
-| `exportar [carpeta]` | Exporta las notas a un archivo de texto en una ruta absoluta (o en tu carpeta de usuario). | `node src/index.js exportar "C:\Users\Samuel\Documentos"` |
-| `ayuda` | Muestra el menú de ayuda con la sintaxis de cada comando. | `node src/index.js ayuda` |
+
+ `agregar "<texto>" [etiqueta]`  Guarda una nueva nota (etiqueta opcional, por defecto `general`).  `node src/index.js agregar "Terminar reporte" trabajo` 
+ `listar [N]`  Muestra las últimas N notas (por defecto muestra 5).  `node src/index.js listar 3` 
+ `buscar <palabra>`  Busca notas que contengan la palabra indicada.  `node src/index.js buscar reporte` 
+ `borrar <id>`  Elimina una nota mediante su ID de 8 caracteres.  `node src/index.js borrar a1b2c3d4` 
+ `respaldar`  Crea una copia con marca de tiempo de `notas.json` en `respaldos/`.  `node src/index.js respaldar` 
+ `exportar [carpeta]`  Exporta las notas a un archivo de texto en una ruta absoluta (o en tu carpeta de usuario).  `node src/index.js exportar "C:\Users\Samuel\Documentos"` 
+ `ayuda`  Muestra el menú de ayuda con la sintaxis de cada comando.  `node src/index.js ayuda` 
 
 ---
 ## Preguntas de reflexión
@@ -49,4 +49,4 @@ Porque si usamos una ruta relativa como `./data/notas.json`, Node la calcula tom
 No se sube porque es una carpeta muy pesada que contiene miles de archivos y librerías externas, lo que haría el repositorio gigante y lento de clonar. Otra persona no necesita que se la enviemos: basta con que clone el proyecto y ejecute `npm install`, ya que `package.json` y `package-lock.json` guardan el listado y las versiones exactas que deben descargarse.
 
 ### 5. ¿Qué diferencia viste al importar tu paquete CommonJS desde tu proyecto?
-Aunque el paquete de fechas fue creado con CommonJS usando `module.exports`, desde mi proyecto principal pude usar la sintaxis moderna `import { getShortDate } from ...`. La diferencia práctica fue ver cómo Node.js hace de puente entre ambos sistemas sin problemas, permitiéndome desestructurar las funciones directamente con llaves sin tener que usar `require()`.
+Aunque el paquete de fechas fue creado con CommonJS usando `module.exports`, desde mi proyecto principal pude usar la sintaxis moderna `import { getShortDate } from ...`. La diferencia práctica fue ver cómo Node.js hace de puente entre ambos sistemas sin problemas, permitiéndome desestructurar las funciones directamente con llaves sin tener que usar `require()`.r.
