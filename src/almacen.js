@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import os from "os";
-import Fecha from "./fechas.js";
+import { getShortDate } from "fechas-bitacora-yuca-martines";
 
 const FolderName = path.join(import.meta.dirname, "..", "data");
 const FileName = path.join(FolderName, 'notas.json');
@@ -40,7 +40,7 @@ export function guardarNotas(notas) {
 
 export function registrarAccion(comando, resultado) {
     fs.mkdirSync(FolderName, { recursive: true });
-    const linea = `${Fecha()} | ${comando} | ${resultado}\n`;
+    const linea = `${getShortDate()} | ${comando} | ${resultado}\n`;
     fs.appendFileSync(BitLog, linea);
 }
 

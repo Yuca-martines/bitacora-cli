@@ -1,5 +1,5 @@
 import hash from "object-hash";
-import Fecha from "./fechas.js";
+import { getShortDate } from "fechas-bitacora-yuca-martines";
 import { LeerNotas, guardarNotas } from "./almacen.js";
 
 const LimitePorDefecto = 5;
@@ -25,7 +25,7 @@ export function agregar(texto, etiqueta = "general") {
     const nota = {
         id: hashtexto,
         texto: textoLimpio, etiqueta,
-        fecha: Fecha()
+        fecha: getShortDate()
     };
 
     notas.push(nota);

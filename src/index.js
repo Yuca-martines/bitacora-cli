@@ -1,6 +1,5 @@
 import { agregar, listar, buscar, borrar, respaldar, exportar } from "./notas.js"
 import { registrarAccion } from "./almacen.js"
-import Fecha from "./fechas.js";
 
 const [comando, ...args] = process.argv.slice(2);
 
